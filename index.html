@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Dor Lombar - Acesso Simplificado aos Sistemas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+        }
+        .container-main {
+            width: 1200px;
+            height: 750px;
+            background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+            border-radius: 30px;
+            border: 3px solid #aaa;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .system-item {
+            transition: transform 0.3s ease;
+        }
+        .system-item:hover {
+            transform: scale(1.05);
+        }
+        .icon-item {
+            transition: transform 0.3s ease;
+        }
+        .icon-item:hover {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-5">
+    <div class="container-main">
+        
+        <!-- Logo SESI (canto superior esquerdo) -->
+        <div class="absolute top-8 left-8">
+            <img src="public/assets/images/sesi.png" alt="SESI" class="w-28 h-auto">
+            <div class="text-gray-600 text-sm mt-2 font-medium">Estação Saúde Conectada</div>
+        </div>
+
+        <!-- Logo Limiar (canto superior direito) -->
+        <div class="absolute top-8 right-8">
+            <img src="public/assets/images/limiar.png" alt="Limiar" class="w-24 h-auto">
+        </div>
+
+        <!-- Título Central -->
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 text-center">
+            <h1 class="text-5xl font-black text-gray-800 mb-2">Projeto Dor Lombar</h1>
+            <p class="text-xl text-gray-600 italic font-medium">Acesso simplificado aos sistemas</p>
+        </div>
+
+        <!-- Sistemas complementares (canto superior direito, abaixo do Limiar) -->
+        <div class="absolute top-32 right-8 text-gray-600 text-sm font-medium">
+            Sistemas complementares
+        </div>
+
+        <!-- Ícones lado esquerdo -->
+        <div class="absolute left-24 top-44 space-y-10">
+            <div class="flex items-center space-x-4 icon-item">
+                <img src="public/assets/images/administrativo.png" alt="Administrativo" class="w-20 h-20 rounded-full shadow-md">
+                <span class="text-lg font-semibold text-gray-800">Administrativo</span>
+            </div>
+            
+            <div class="flex items-center space-x-4 icon-item">
+                <img src="public/assets/images/trabalhador.png" alt="Trabalhador" class="w-20 h-20 rounded-full shadow-md">
+                <span class="text-lg font-semibold text-gray-800">Trabalhador</span>
+            </div>
+            
+            <div class="flex items-center space-x-4 icon-item">
+                <img src="public/assets/images/check-in.png" alt="Check-in" class="w-20 h-20 rounded-full shadow-md">
+                <span class="text-lg font-semibold text-gray-800">Check-in</span>
+            </div>
+            
+            <div class="flex items-center space-x-4 icon-item">
+                <img src="public/assets/images/profissional de saúde.png" alt="Profissional de Saúde" class="w-20 h-20 rounded-full shadow-md">
+                <span class="text-lg font-semibold text-gray-800">Profissional<br>de Saúde</span>
+            </div>
+        </div>
+
+        <!-- Sistemas do lado direito -->
+        <div class="absolute right-8 top-44 space-y-10">
+            <a href="https://eduvem.com/" target="_blank" class="flex items-center space-x-4 system-item">
+                <img src="public/assets/images/eduvem.png" alt="Eduvem" class="w-40 h-auto rounded-lg shadow-md">
+                <span class="text-lg font-semibold text-gray-800">Trilha Educativa</span>
+            </a>
+            
+            <a href="https://kinetec.com.br/new/baiobit/" target="_blank" class="flex items-center space-x-4 system-item">
+                <img src="public/assets/images/baiobit.png" alt="Baiobit" class="w-40 h-auto rounded-lg shadow-md">
+                <span class="text-lg font-semibold text-gray-800">Avaliação Física Digital</span>
+            </a>
+            
+            <a href="https://vedius.com.br/app-de-prescricao-de-exercicios-fisioterapia/" target="_blank" class="flex items-center space-x-4 system-item">
+                <img src="public/assets/images/vedius.png" alt="Vedius" class="w-40 h-auto rounded-lg shadow-md">
+                <span class="text-lg font-semibold text-gray-800">Exercícios Prescritos</span>
+            </a>
+            
+            <a href="https://docs.google.com/forms/u/0/" target="_blank" class="flex items-center space-x-4 system-item">
+                <img src="public/assets/images/formulários.png" alt="Formulários" class="w-40 h-auto rounded-lg shadow-md">
+                <span class="text-lg font-semibold text-gray-800">Diagnóstico da Dor</span>
+            </a>
+
+            <!-- S+ Prontuário Eletrônico (alinhado com os outros ícones) -->
+            <a href="https://www.sesivivamais.com.br/smais/" target="_blank" class="flex items-center space-x-4 system-item">
+                <div class="w-40 flex justify-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                        S+
+                    </div>
+                </div>
+                <span class="text-lg font-semibold text-gray-800">Prontuário Eletrônico</span>
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
